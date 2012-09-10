@@ -1,13 +1,15 @@
 package hdea
 
-import "optprobs"
+import (
+	"optprobs"
+)
 
 type HdEA struct {
-	problem optprobs.Evaluator
+	problem optprobs.FunctionEvaluator
 }
 
 // New returns a new instance
-func New(problem optprobs.Evaluator) (*HdEA) {
+func New(problem optprobs.FunctionEvaluator) (*HdEA) {
 	hdea := new(HdEA)
 	hdea.problem = problem
 	return hdea
