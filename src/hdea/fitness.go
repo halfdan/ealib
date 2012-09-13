@@ -34,3 +34,11 @@ type FitnessTree struct {
 	maxNoVisit int32
 }
 
+func NewFitnessNode(parent *FitnessNode) (*FitnessNode) {
+	node := new(FitnessNode)
+	node.left = nil
+	node.right = nil
+	node.parent = parent
+
+	return node
+}
